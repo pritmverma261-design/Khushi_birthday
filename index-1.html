@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="theme-color" content="#080309">
+<title>Happy Birthday Khushi ❤️</title>
+<style>
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;min-height:100%;background:#080309}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#fff;overflow-x:hidden}
+button{font:inherit}
+#app{min-height:100vh;position:relative;overflow:hidden;background:radial-gradient(circle at 50% 0,#70234f,#2a0c2c 35%,#080309 78%)}
+#stars{position:fixed;inset:0;pointer-events:none}
+.star{position:absolute;width:2px;height:2px;background:#fff;border-radius:50%;opacity:.5;animation:twinkle 2s infinite alternate}
+@keyframes twinkle{to{opacity:1;transform:scale(1.7)}}
+.scene{display:none;min-height:100vh;padding:28px 15px 45px;position:relative;z-index:2;align-items:center;justify-content:center;flex-direction:column;text-align:center}
+.scene.show{display:flex;animation:in .55s ease}
+@keyframes in{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:none}}
+.eyebrow{padding:9px 17px;border:1px solid #fff2;border-radius:99px;background:#ffffff0a;color:#ffd7e9;font-size:11px;letter-spacing:2.5px}
+.title{font-size:clamp(45px,14vw,80px);line-height:.92;letter-spacing:-3px;font-weight:850;margin:23px 0 15px}
+.pink{color:#ff82bf}
+.lead{color:#e9cada;line-height:1.65;font-size:16px}
+.primary,.secondary{border-radius:999px;padding:15px 25px;font-weight:800;cursor:pointer}
+.primary{border:0;background:linear-gradient(135deg,#ffe0ed,#ff73b8);color:#351226;box-shadow:0 15px 45px #ff5baa40}
+.secondary{border:1px solid #ff86c466;background:#ffffff0a;color:#ffe3ef}
+.primary:active,.secondary:active{transform:scale(.95)}
+
+.cakeTitle{font-size:clamp(28px,8vw,42px);margin:17px 0 5px}
+.cakeBox{
+ width:min(94vw,600px);position:relative;margin:15px auto;
+ border-radius:25px;overflow:hidden;background:#050207;
+ box-shadow:0 25px 80px #000b;border:1px solid #ffffff18;
+}
+.cakePhoto{display:block;width:100%;height:auto;min-height:300px;object-fit:cover}
+.cakeShade{position:absolute;inset:0;background:radial-gradient(circle at 50% 40%,transparent 15%,#0004 80%);pointer-events:none}
+
+/* five real-looking animated candle overlays */
+.candle{
+ position:absolute;width:8px;height:82px;border-radius:5px 5px 3px 3px;
+ background:repeating-linear-gradient(135deg,#ff5f9f 0 7px,#fff 7px 12px);
+ box-shadow:inset -2px 0 2px #0003,0 2px 4px #0008;
+ transform:translateX(-50%);
+ cursor:pointer;z-index:5;
+}
+.candle:after{
+ content:"";position:absolute;left:50%;bottom:-5px;width:13px;height:7px;
+ transform:translateX(-50%);border-radius:50%;background:#ffe7d0;
+}
+.candle .flame{
+ position:absolute;left:50%;top:-35px;width:18px;height:31px;
+ transform:translateX(-50%);
+ background:radial-gradient(ellipse at 50% 75%,#fff 0 18%,#ffd35a 35%,#ff7a16 62%,transparent 70%);
+ border-radius:50% 50% 50% 50% / 65% 65% 35% 35%;
+ filter:drop-shadow(0 0 8px #ffb52c);
+ animation:flicker .11s infinite alternate;
+}
+.candle .flame:after{
+ content:"";position:absolute;left:5px;top:4px;width:8px;height:18px;
+ background:#fff;border-radius:50%;opacity:.8;
+}
+@keyframes flicker{
+ from{transform:translateX(-50%) rotate(-3deg) scale(.94)}
+ to{transform:translateX(-50%) rotate(4deg) scale(1.07)}
+}
+.candle.off{opacity:.72}
+.candle.off .flame{display:none}
+.candle.off:before{
+ content:"";position:absolute;left:50%;top:-22px;width:3px;height:30px;
+ background:linear-gradient(#ddd0, #ddd9, transparent);
+ filter:blur(1px);transform:translateX(-50%);animation:smoke 1.2s forwards
+}
+@keyframes smoke{to{opacity:0;transform:translate(-50%,-35px) scale(1.8)}}
+
+/* positions on the cake image */
+.c1{left:31%;top:35%}.c2{left:41%;top:29%}.c3{left:51%;top:27%}.c4{left:61%;top:30%}.c5{left:70%;top:35%}
+
+.status{padding:10px 17px;border-radius:99px;border:1px solid #fff2;background:#ffffff0a;color:#ffd8e8}
+.controls{display:flex;gap:10px;width:min(94vw,600px);margin-top:10px}
+.controls>*{flex:1}
+.next{display:none;margin-top:14px}
+.next.show{display:inline-block}
+
+.card{width:min(94vw,570px);padding:27px 21px;border-radius:28px;background:linear-gradient(145deg,#fff7fb,#ffe5f0);color:#4a2035;box-shadow:0 25px 70px #000a;text-align:left}
+.card small{color:#a35478;letter-spacing:2px}
+.card h2{font:34px Georgia,serif;color:#672642;margin:12px 0}
+.card p{font:16px Georgia,serif;line-height:1.8}
+.sign{text-align:center;font:21px cursive;color:#87375d}
+
+.gallery{width:min(94vw,570px);display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:15px}
+.gallery img{width:100%;height:280px;object-fit:cover;border-radius:20px;box-shadow:0 15px 45px #0009}
+.heart{font-size:60px;animation:pulse 1.4s infinite}
+@keyframes pulse{50%{transform:scale(1.15)}}
+.confetti{position:fixed;top:-30px;z-index:50;pointer-events:none;animation:fall 3.5s linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:0}}
+@media(max-width:430px){.controls{flex-direction:column}.gallery img{height:235px}.candle{height:68px}.c1{top:37%}.c2{top:33%}.c3{top:31%}.c4{top:34%}.c5{top:37%}}
+</style>
+</head>
+
+<body>
+<div id="app">
+<div id="stars"></div>
+
+<section id="intro" class="scene show">
+ <div class="eyebrow">✨ A LITTLE SURPRISE FOR YOU ✨</div>
+ <div class="title">Happy Birthday<br><span class="pink">Khushi</span> ❤️</div>
+ <p class="lead">Someone made this little world just for you.<br>Take your time... 💝</p>
+ <button class="primary" onclick="showScene('cake')">Tap to open 🎁</button>
+</section>
+
+<section id="cake" class="scene">
+ <div class="eyebrow">01 · MAKE A WISH</div>
+ <h2 class="cakeTitle">Make a wish first 🎂</h2>
+ <p class="lead">Tap the burning candles one by one.<br>If a tap doesn't work, use <b>Blow Next</b>.</p>
+
+ <div class="cakeBox" id="cakeBox">
+   <!-- CC0/public-domain cake photo from Wikimedia Commons -->
+   <img class="cakePhoto"
+        src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Birthday_cake_img.jpg"
+        alt="Birthday cake">
+   <div class="cakeShade"></div>
+
+   <div class="candle c1" data-i="0" onclick="out(0)"><span class="flame"></span></div>
+   <div class="candle c2" data-i="1" onclick="out(1)"><span class="flame"></span></div>
+   <div class="candle c3" data-i="2" onclick="out(2)"><span class="flame"></span></div>
+   <div class="candle c4" data-i="3" onclick="out(3)"><span class="flame"></span></div>
+   <div class="candle c5" data-i="4" onclick="out(4)"><span class="flame"></span></div>
+ </div>
+
+ <div class="status">🔥 Candles burning: <b id="count">5</b></div>
+
+ <div class="controls">
+   <button class="primary" onclick="blowNext()">💨 Blow Next</button>
+   <button class="secondary" onclick="blowAll()">✨ Blow All</button>
+ </div>
+
+ <button id="next" class="primary next" onclick="showScene('letter')">Continue 💌</button>
+</section>
+
+<section id="letter" class="scene">
+ <div class="eyebrow">02 · A MESSAGE FOR YOU</div>
+ <div class="card">
+   <small>JUST FOR KHUSHI ❤️</small>
+   <h2>Dear Khushi,</h2>
+   <p>Aaj ka din sirf tumhare naam hai. 🎂 Dil se wish hai ki tumhari life mein hamesha happiness, peace, success aur bahut saari beautiful memories rahein.</p>
+   <p>Tumhari smile hamesha aise hi rahe, tumhare saare dreams poore ho, aur har naya saal tumhare liye pichhle saal se bhi zyada khoobsurat ho. ✨</p>
+   <p>Bas ek baat kabhi mat bhoolna — <b>you are genuinely special.</b> ❤️</p>
+   <div class="sign">Happy Birthday, Khushi! 🎉<br>Stay happy. Stay smiling. ❤️</div>
+ </div>
+ <button class="primary" style="margin-top:20px" onclick="showScene('memories')">One More Surprise 📸</button>
+</section>
+
+<section id="memories" class="scene">
+ <div class="eyebrow">03 · YOUR MEMORIES</div>
+ <h2 class="cakeTitle">Beautiful moments ❤️</h2>
+ <div class="gallery">
+   <img src="khushi1.jpg" alt="Khushi">
+   <img src="khushi2.jpg" alt="Khushi">
+ </div>
+ <div class="heart">❤️</div>
+ <p class="lead">Keep smiling, Khushi.<br>Today is your day. 🌸</p>
+ <button class="primary" onclick="location.reload()">Replay ↻</button>
+</section>
+
+<script>
+/* stars */
+for(let i=0;i<90;i++){
+ const s=document.createElement("i");
+ s.className="star";
+ s.style.left=Math.random()*100+"%";
+ s.style.top=Math.random()*100+"%";
+ s.style.animationDelay=Math.random()*2+"s";
+ document.getElementById("stars").appendChild(s);
+}
+
+/* navigation */
+function showScene(id){
+ document.querySelectorAll(".scene").forEach(x=>x.classList.remove("show"));
+ document.getElementById(id).classList.add("show");
+ scrollTo(0,0);
+}
+
+/* candle system */
+const off=[false,false,false,false,false];
+
+function out(i){
+ if(off[i]) return;
+ off[i]=true;
+ const c=document.querySelectorAll(".candle")[i];
+ c.classList.add("off");
+ document.getElementById("count").textContent=off.filter(x=>!x).length;
+ if(off.every(Boolean)) finishCake();
+}
+
+function blowNext(){
+ const i=off.findIndex(x=>!x);
+ if(i!==-1) out(i);
+}
+
+function blowAll(){
+ for(let i=0;i<5;i++){
+   if(!off[i]) setTimeout(()=>out(i),i*220);
+ }
+}
+
+function finishCake(){
+ document.getElementById("next").classList.add("show");
+ celebrate();
+}
+
+function celebrate(){
+ const a=["❤️","💕","✨","🎉","🎊","💖","🌸","⭐"];
+ for(let i=0;i<65;i++){
+   const x=document.createElement("span");
+   x.className="confetti";
+   x.textContent=a[Math.floor(Math.random()*a.length)];
+   x.style.left=Math.random()*100+"%";
+   x.style.fontSize=(14+Math.random()*18)+"px";
+   x.style.animationDelay=Math.random()*1.2+"s";
+   document.body.appendChild(x);
+   setTimeout(()=>x.remove(),4500);
+ }
+}
+</script>
+</div>
+</body>
+</html>
