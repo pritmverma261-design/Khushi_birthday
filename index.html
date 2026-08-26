@@ -2,24 +2,32 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#130817">
-<title>Happy Birthday Khushi ❤️</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="theme-color" content="#160817">
+<title>Happy Birthday  Babu  ❣️</title>
 
 <style>
-*{box-sizing:border-box}
+*{
+box-sizing:border-box;
+-webkit-tap-highlight-color:transparent;
+}
 
 html,body{
 margin:0;
+padding:0;
+width:100%;
 min-height:100%;
-font-family:system-ui,-apple-system,Segoe UI,sans-serif;
-background:#100713;
-color:white
 }
 
 body{
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+color:#fff;
 overflow-x:hidden;
-background:radial-gradient(circle at 50% -10%,#61214f 0,#241027 34%,#0d0710 72%)
+background:radial-gradient(circle at 50% 0%,#672452 0%,#29102d 35%,#0c0610 78%);
+}
+
+button{
+font-family:inherit;
 }
 
 #stars{
@@ -27,14 +35,1016 @@ position:fixed;
 inset:0;
 pointer-events:none;
 background-image:
-radial-gradient(#fff9 1px,transparent 1px),
-radial-gradient(#fff6 1px,transparent 1px);
-background-size:53px 53px,89px 89px;
+radial-gradient(#fff 1px,transparent 1px),
+radial-gradient(#fff 1px,transparent 1px);
+background-size:55px 55px,91px 91px;
 background-position:10px 20px,35px 60px;
-opacity:.25
+opacity:.2;
 }
 
 main{
+width:100%;
+max-width:720px;
+margin:auto;
+position:relative;
+}
+
+.screen{
+display:none;
+min-height:100vh;
+padding:45px 18px 80px;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+text-align:center;
+position:relative;
+}
+
+.screen.active{
+display:flex;
+animation:screenIn .55s ease;
+}
+
+@keyframes screenIn{
+from{opacity:0;transform:translateY(20px)}
+to{opacity:1;transform:translateY(0)}
+}
+
+.pill,.step{
+display:inline-block;
+padding:10px 17px;
+border-radius:999px;
+border:1px solid #ffffff25;
+background:#ffffff0d;
+color:#ffd7e8;
+font-size:11px;
+letter-spacing:2px;
+backdrop-filter:blur(8px);
+}
+
+h1{
+margin:25px 0 15px;
+font-size:clamp(50px,14vw,90px);
+line-height:.9;
+letter-spacing:-4px;
+background:linear-gradient(90deg,#fff,#ffb5d6,#fff);
+-webkit-background-clip:text;
+color:transparent;
+}
+
+h1 span{
+color:#ffb5d6;
+}
+
+h2{
+margin:20px 0 8px;
+font-size:clamp(28px,8vw,48px);
+line-height:1.05;
+}
+
+h2 span{
+color:#ffb6d7;
+}
+
+.soft{
+color:#ead3df;
+opacity:.8;
+line-height:1.6;
+font-size:16px;
+}
+
+.primary,.ghost,.pop-next{
+border:0;
+border-radius:999px;
+padding:15px 25px;
+font-size:16px;
+font-weight:700;
+cursor:pointer;
+touch-action:manipulation;
+user-select:none;
+}
+
+.primary{
+margin-top:20px;
+color:#321224;
+background:linear-gradient(90deg,#ffd0e4,#fff2f7);
+box-shadow:0 12px 35px #ff7eb544;
+}
+
+.ghost{
+margin-top:25px;
+color:#ffe8f2;
+background:#ffffff10;
+border:1px solid #ffffff25;
+}
+
+.hidden{
+display:none!important;
+}
+
+/* BALLOONS */
+
+.balloon-field{
+width:100%;
+height:55vh;
+min-height:410px;
+max-height:560px;
+margin-top:10px;
+position:relative;
+overflow:visible;
+touch-action:manipulation;
+}
+
+.balloon{
+position:absolute;
+width:75px;
+height:92px;
+padding:0;
+margin:0;
+border:0;
+background:transparent;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:62px;
+line-height:1;
+cursor:pointer;
+z-index:100;
+pointer-events:auto;
+touch-action:manipulation;
+user-select:none;
+-webkit-user-select:none;
+transition:transform .25s ease,opacity .25s ease;
+}
+
+.balloon:focus{
+outline:none;
+}
+
+.balloon:active{
+transform:scale(.9);
+}
+
+.balloon.popped{
+pointer-events:none;
+animation:balloonPop .4s ease forwards;
+}
+
+@keyframes balloonPop{
+0%{transform:scale(1);opacity:1}
+50%{transform:scale(1.55);opacity:.7}
+100%{transform:scale(2);opacity:0}
+}
+
+.counter{
+color:#ffd3e6;
+font-size:18px;
+margin:5px 0;
+}
+
+.pop-next{
+margin-top:10px;
+color:#351326;
+background:linear-gradient(90deg,#ffd0e5,#fff);
+box-shadow:0 8px 25px #ff9ac533;
+position:relative;
+z-index:200;
+}
+
+.pop-next:active{
+transform:scale(.96);
+}
+
+/* CAKE */
+
+.cake-wrap{
+width:min(92vw,430px);
+margin:25px auto 5px;
+}
+
+.flame-row{
+display:flex;
+justify-content:center;
+gap:25px;
+}
+
+.flame{
+border:0;
+background:transparent;
+font-size:42px;
+padding:5px;
+cursor:pointer;
+touch-action:manipulation;
+transition:.3s;
+}
+
+.flame.off{
+opacity:.25;
+filter:grayscale(1);
+transform:scale(.75);
+}
+
+.cake{
+width:290px;
+height:145px;
+margin:auto;
+border-radius:25px 25px 35px 35px;
+background:linear-gradient(#ffb5d4 0 25%,#89345e 25% 100%);
+box-shadow:0 20px 45px #0009;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+}
+
+.icing{
+font-size:15px;
+font-weight:700;
+}
+
+.cake strong{
+margin-top:5px;
+font-family:cursive;
+font-size:34px;
+}
+
+.cake-line{
+width:220px;
+border-top:3px dotted #ffd9e8;
+margin-top:12px;
+}
+
+.plate{
+width:340px;
+height:18px;
+margin:-2px auto;
+border-radius:50%;
+background:#ffffff25;
+}
+
+/* LETTER */
+
+.letter-card{
+width:100%;
+max-width:600px;
+margin-top:22px;
+padding:28px 23px;
+text-align:left;
+color:#432332;
+background:linear-gradient(135deg,#fffaf7,#ffe8f0);
+border-radius:8px 25px 8px 25px;
+box-shadow:0 22px 70px #0009;
+transform:rotate(-.4deg);
+}
+
+.letter-mini{
+font-size:12px;
+letter-spacing:2px;
+color:#a85d78;
+text-transform:uppercase;
+}
+
+.letter-card h2{
+font-family:Georgia,serif;
+color:#5b2940;
+font-size:34px;
+margin:15px 0;
+}
+
+.letter-card p{
+font-family:Georgia,serif;
+font-size:17px;
+line-height:1.75;
+}
+
+.sign{
+text-align:center;
+color:#7d3b58;
+font-weight:600;
+}
+
+/* PHOTOS */
+
+.photos{
+width:100%;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:12px;
+margin-top:22px;
+}
+
+.photos img{
+width:100%;
+height:360px;
+object-fit:cover;
+border-radius:22px;
+box-shadow:0 15px 40px #0009;
+}
+
+.big-heart{
+margin-top:20px;
+font-size:58px;
+animation:heartPulse 1.5s infinite;
+}
+
+@keyframes heartPulse{
+50%{transform:scale(1.15)}
+}
+
+.date{
+margin-top:18px;
+color:#ffc8dd;
+font-size:11px;
+letter-spacing:3px;
+}
+
+/* CONFETTI */
+
+#confetti{
+position:fixed;
+inset:0;
+pointer-events:none;
+overflow:hidden;
+z-index:9999;
+}
+
+.piece{
+position:absolute;
+width:8px;
+height:14px;
+top:-30px;
+animation:confettiFall 4.5s linear forwards;
+}
+
+@keyframes confettiFall{
+to{
+top:110vh;
+transform:rotate(720deg);
+}
+}
+
+@media(max-width:500px){
+
+.screen{
+padding-left:15px;
+padding-right:15px;
+}
+
+.balloon-field{
+height:55vh;
+min-height:400px;
+}
+
+.balloon{
+width:70px;
+height:85px;
+font-size:58px;
+}
+
+.cake{
+width:250px;
+}
+
+.plate{
+width:290px;
+}
+
+.photos img{
+height:280px;
+}
+
+.letter-card{
+padding:23px 18px;
+}
+
+.letter-card p{
+font-size:16px;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<div id="stars"></div>
+<div id="confetti"></div>
+
+<main>
+
+<!-- WELCOME -->
+
+<section id="welcome" class="screen active">
+
+<div class="pill">
+✨ A LITTLE SURPRISE FOR YOU
+</div>
+
+<h1>
+Happy Birthday<br>
+<span>Khushi</span> ❤️
+</h1>
+
+<p class="soft">
+Someone made this little world just for you.
+</p>
+
+<button class="primary" id="start">
+Tap to open 🎁
+</button>
+
+</section>
+
+
+<!-- BALLOONS -->
+
+<section id="balloons" class="screen">
+
+<div class="step">
+01 · POP THE BALLOONS
+</div>
+
+<h2>
+Make a wish first 🎈
+</h2>
+
+<p class="soft">
+Tap every balloon.
+</p>
+
+<div id="balloonField" class="balloon-field"></div>
+
+<p class="counter">
+<span id="popped">0</span> / 8 popped
+</p>
+
+<button id="popNext" class="pop-next">
+🎈 POP NEXT BALLOON
+</button>
+
+</section>
+
+
+<!-- CAKE -->
+
+<section id="cake" class="screen">
+
+<div class="step">
+02 · YOUR CAKE
+</div>
+
+<h2>
+A cake made for <span>Khushi Babu</span> 🎂
+</h2>
+
+<div class="cake-wrap">
+
+<div class="flame-row">
+
+<button class="flame">🕯️</button>
+<button class="flame">🕯️</button>
+<button class="flame">🕯️</button>
+
+</div>
+
+<div class="cake">
+
+<div class="icing">
+Happy Birthday Babu
+</div>
+
+<strong>
+Khushi Babu
+</strong>
+
+<div class="cake-line"></div>
+
+</div>
+
+<div class="plate"></div>
+
+</div>
+
+<p class="soft">
+Tap all three candles to blow them out ✨
+</p>
+
+<button id="cakeNext" class="primary hidden">
+Open your letter 💌
+</button>
+
+</section>
+
+
+<!-- LETTER -->
+
+<section id="letter" class="screen">
+
+<div class="step">
+03 · A LETTER FOR YOU
+</div>
+
+<div class="letter-card">
+
+<div class="letter-mini">
+For Khushi ❤️
+</div>
+
+<h2>
+Dear Khushi,
+</h2>
+
+<p>
+Aaj ka din thoda aur special hai,
+kyunki aaj <b>tumhara birthday</b> hai. 🌸
+</p>
+
+<p>
+Tumhari smile mein ek alag hi sukoon hai,
+aur tumhari presence ordinary moments ko bhi
+beautiful bana deti hai.
+Bas dil se ye wish hai ki tumhari life hamesha
+happiness, success, pyaar aur bahut saari
+khoobsurat yaadon se bhari rahe. ✨
+</p>
+
+<p>
+Jo dreams tum dekhti ho,
+woh ek-ek karke sach hote jaayein.
+Aur haan...
+<b>aise hi hamesha smile karti rehna.
+bs aap se ak request hai mere gusee ya muje kabhi galat mat samjana bhale kuch ho jaaye life me
+mai hamesa tumhara rahu ga bhale he kisi se baat kru ya nhi.</b> ❤️
+</p>
+
+<p class="sign">
+Happy Birthday, Khushi babu ! 🎂<br>
+With lots of love & good wishes 🫶
+</p>
+
+</div>
+
+<button id="memories" class="primary">
+One last surprise 📸
+</button>
+
+</section>
+
+
+<!-- PHOTOS -->
+
+<section id="memoriesScreen" class="screen">
+
+<div class="step">
+04 · YOUR MEMORIES
+</div>
+
+<h2>
+Two little moments, saved here ❤️
+</h2>
+
+<div class="photos">
+
+<img src="khushi1.jpg" alt="Khushi">
+
+<img src="khushi2.jpg" alt="Khushi">
+
+</div>
+
+<div class="final">
+
+<div class="big-heart">
+❤️
+</div>
+
+<h2>
+Keep smiling, Khushi.
+</h2>
+
+<p class="soft">
+Today, tomorrow and every day after that. ✨
+</p>
+
+<div class="date">
+27 AUGUST · YOUR DAY
+</div>
+
+</div>
+
+<button id="replay" class="ghost">
+Play again ↻
+</button>
+
+</section>
+
+</main>
+
+
+<script>
+
+/* ================================
+SCREEN SYSTEM
+================================ */
+
+const screens = {
+
+welcome:
+document.getElementById("welcome"),
+
+balloons:
+document.getElementById("balloons"),
+
+cake:
+document.getElementById("cake"),
+
+letter:
+document.getElementById("letter"),
+
+memories:
+document.getElementById("memoriesScreen")
+
+};
+
+
+function showScreen(screen){
+
+Object.values(screens).forEach(function(item){
+
+item.classList.remove("active");
+
+});
+
+screen.classList.add("active");
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+
+}
+
+
+/* ================================
+WELCOME BUTTON
+================================ */
+
+document
+.getElementById("start")
+.addEventListener("click",function(){
+
+showScreen(screens.balloons);
+
+setupBalloons();
+
+});
+
+
+/* ================================
+BALLOON SYSTEM
+================================ */
+
+let poppedCount = 0;
+
+let balloons = [];
+
+
+/* SAFE POSITIONS */
+
+const positions = [
+
+[5,4],
+[39,2],
+[73,5],
+[12,29],
+[51,27],
+[78,38],
+[25,58],
+[62,65]
+
+];
+
+
+function setupBalloons(){
+
+const field =
+document.getElementById("balloonField");
+
+field.innerHTML="";
+
+poppedCount=0;
+
+balloons=[];
+
+document
+.getElementById("popped")
+.textContent="0";
+
+
+for(let i=0;i<8;i++){
+
+const balloon =
+document.createElement("button");
+
+balloon.type="button";
+
+balloon.className="balloon";
+
+balloon.innerHTML="🎈";
+
+balloon.style.left =
+positions[i][0]+"%";
+
+balloon.style.top =
+positions[i][1]+"%";
+
+
+/* MOBILE TOUCH */
+
+balloon.addEventListener(
+"touchend",
+function(e){
+
+e.preventDefault();
+
+e.stopPropagation();
+
+popBalloon(balloon);
+
+},
+{passive:false}
+);
+
+
+/* NORMAL CLICK */
+
+balloon.addEventListener(
+"click",
+function(e){
+
+e.preventDefault();
+
+e.stopPropagation();
+
+popBalloon(balloon);
+
+}
+);
+
+
+field.appendChild(balloon);
+
+balloons.push(balloon);
+
+}
+
+}
+
+
+/* ================================
+POP BALLOON
+================================ */
+
+function popBalloon(balloon){
+
+if(!balloon){
+return;
+}
+
+if(
+balloon.classList.contains("popped")
+){
+return;
+}
+
+balloon.classList.add("popped");
+
+balloon.disabled=true;
+
+poppedCount++;
+
+document
+.getElementById("popped")
+.textContent=poppedCount;
+
+miniConfetti();
+
+
+if(poppedCount>=8){
+
+setTimeout(function(){
+
+showScreen(screens.cake);
+
+},650);
+
+}
+
+}
+
+
+/* ================================
+BACKUP POP BUTTON
+================================ */
+
+document
+.getElementById("popNext")
+.addEventListener(
+"click",
+function(){
+
+const next =
+balloons.find(function(balloon){
+
+return !balloon.classList.contains("popped");
+
+});
+
+
+if(next){
+
+popBalloon(next);
+
+}
+
+}
+);
+
+
+/* ================================
+CONFETTI
+================================ */
+
+function miniConfetti(){
+
+const box =
+document.getElementById("confetti");
+
+
+for(let i=0;i<10;i++){
+
+const piece =
+document.createElement("i");
+
+piece.className="piece";
+
+piece.style.left =
+Math.random()*100+"%";
+
+piece.style.background =
+"hsl("+
+Math.random()*360+
+",90%,78%)";
+
+piece.style.animationDelay =
+Math.random()*.5+"s";
+
+box.appendChild(piece);
+
+
+setTimeout(function(){
+
+piece.remove();
+
+},5000);
+
+}
+
+}
+
+
+function bigConfetti(){
+
+const box =
+document.getElementById("confetti");
+
+
+for(let i=0;i<90;i++){
+
+const piece =
+document.createElement("i");
+
+piece.className="piece";
+
+piece.style.left =
+Math.random()*100+"%";
+
+piece.style.background =
+"hsl("+
+Math.random()*360+
+",90%,78%)";
+
+piece.style.animationDelay =
+Math.random()*1.5+"s";
+
+box.appendChild(piece);
+
+
+setTimeout(function(){
+
+piece.remove();
+
+},6000);
+
+}
+
+}
+
+
+/* ================================
+CANDLES
+================================ */
+
+const flames =
+document.querySelectorAll(".flame");
+
+
+flames.forEach(function(flame){
+
+flame.addEventListener(
+"click",
+function(){
+
+flame.classList.toggle("off");
+
+
+const allOff =
+Array.from(flames).every(
+function(item){
+
+return item.classList.contains("off");
+
+});
+
+
+if(allOff){
+
+bigConfetti();
+
+document
+.getElementById("cakeNext")
+.classList.remove("hidden");
+
+}
+
+}
+);
+
+});
+
+
+/* ================================
+CAKE → LETTER
+================================ */
+
+document
+.getElementById("cakeNext")
+.addEventListener(
+"click",
+function(){
+
+showScreen(screens.letter);
+
+}
+);
+
+
+/* ================================
+LETTER → PHOTOS
+================================ */
+
+document
+.getElementById("memories")
+.addEventListener(
+"click",
+function(){
+
+showScreen(screens.memories);
+
+bigConfetti();
+
+}
+);
+
+
+/* ================================
+REPLAY
+================================ */
+
+document
+.getElementById("replay")
+.addEventListener(
+"click",
+function(){
+
+showScreen(screens.welcome);
+
+}
+);
+
+</script>
+
+</body>
+  </html>main{
 position:relative;
 max-width:720px;
 margin:auto;
@@ -165,19 +1175,19 @@ inset -9px -10px 0 #0002,
 </section>
 
 <section class="screen" id="cake">
-<div class="step">02 · YOUR CAKE</div><h2>A cake made for <span>Khushi</span> 🎂</h2>
+<div class="step">02 · YOUR CAKE</div><h2>A cake made for <span>Khushi babu</span> 🎂</h2>
 <div class="cake-wrap"><div class="flame-row"><button class="flame">🕯️</button><button class="flame">🕯️</button><button class="flame">🕯️</button></div>
-<div class="cake"><div class="icing">Happy Birthday</div><strong>Khushi</strong><div class="cake-line"></div></div><div class="plate"></div></div>
+<div class="cake"><div class="icing">Happy Birthday</div><strong>babu</strong><div class="cake-line"></div></div><div class="plate"></div></div>
 <p class="soft">Tap all three candles to blow them out ✨</p><button class="primary hidden" id="cakeNext">Open your letter 💌</button>
 </section>
 
 <section class="screen" id="letter">
 <div class="step">03 · A LETTER FOR YOU</div>
-<div class="letter-card"><div class="mini">For Khushi ❤️</div><h2>Dear Khushi,</h2>
+<div class="letter-card"><div class="mini">For Khushi babu❤️</div><h2>Dear Khushi,</h2>
 <p>Aaj ka din thoda aur special hai, kyunki aaj <b>tumhara birthday</b> hai. 🌸</p>
 <p>Tumhari smile mein ek alag hi sukoon hai, aur tumhari presence ordinary moments ko bhi beautiful bana deti hai. Bas dil se ye wish hai ki tumhari life hamesha happiness, success, pyaar aur bahut saari khoobsurat yaadon se bhari rahe. ✨</p>
 <p>Jo dreams tum dekhti ho, woh ek-ek karke sach hote jaayein. Aur haan… <b>aise hi hamesha smile karti rehna.</b> ❤️</p>
-<p class="sign">Happy Birthday, Khushi! 🎂<br>With lots of love & good wishes 🫶</p></div>
+<p class="sign">Happy Birthday, Khushi babu! 🎂<br>With lots of love & good wishes 🫶</p></div>
 <button class="primary" id="memories">One last surprise 📸</button>
 </section>
 
